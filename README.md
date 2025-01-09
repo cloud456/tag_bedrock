@@ -33,7 +33,8 @@ pip install -r requirements.txt
 - profile_name: inference profile名称
 
 - model_inference_profile_arn: 返回的inference profile ARN,用于后续调用converse时的model_id 参数
-
+```
+```
 
 3. 使用AWS CLI 创建inference profile
 ```bash
