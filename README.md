@@ -35,8 +35,15 @@ pip install -r requirements.txt
 - model_inference_profile_arn: 返回的inference profile ARN,用于后续调用converse时的model_id 参数
 
 
-3. policy
+3. 使用AWS CLI 创建inference profile
+```bash
+aws bedrock create-inference-profile --inference-profile-name <profile_name> --model-source copyFrom=<model_arn> --tags key=<key>,value=<value>
+```
+
+4. policy
+
 在对模型进行调用时，请确保拥有以下权限
+
 ```
 {
   "Version": "2012-10-17",
@@ -53,3 +60,5 @@ pip install -r requirements.txt
   ]
 }
 ```
+
+
